@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
-import Sidebar from './Sidebar'
-
+import { Sidebar, Videos } from './';
+import { fetchFromAPI } from '../utils/fetchFromAPI';
 
 const Feed = () => {
+
+  
   return (
     <Stack sx={{flexDirection: { sx: "column", md: "row" }}}>
       <Box sx={{height: { sx: "auto", md: '92vh'}, borderRight: '1px solid #3d3d3d', px: { sx: 0, md: 2}}}>
@@ -19,6 +21,8 @@ const Feed = () => {
         <Typography variant="h4" fontWeight="bold" mb={2} sx={{color: 'white'}}>
           New <span style={{color: '#F31503'}}>videos</span>
         </Typography>
+
+        <Videos videos={[]}/>
       </Box>
       
     </Stack>
