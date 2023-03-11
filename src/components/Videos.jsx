@@ -6,8 +6,7 @@ const Videos = ({videos}) => {
   <Stack direction="row" flexWrap="wrap" justifyContent="start" gap={2}>
     {videos.map((item, idx)=>(
       <Box key={idx} >
-        {item.id.videoid && <VideoCard video={item} />}
-        {item.id.channelid && <ChannelCard channelDetail={item} />}
+
       </Box>
     ))}
   </Stack>
